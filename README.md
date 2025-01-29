@@ -68,21 +68,23 @@ npm test
 📂 project-root
  ├── 📂 src
  │   ├── 📂 controllers
- │   │   ├── bookController.js
+ │   │   ├── bookController.js        # Contains functions that handle requests for the books (GET, POST, PUT, DELETE).
  │   ├── 📂 models
- │   │   ├── bookModel.js
+ │   │   ├── bookModel.js             # Defines the book model and stores books in memory (or a database in the future).
  │   ├── 📂 routes
- │   │   ├── bookRoutes.js
+ │   │   ├── bookRoutes.js            # Defines the routes for book-related operations, mapping HTTP methods to controller actions.
  │   ├── 📂 middlewares
- │   │   ├── validateBook.js
+ │   │   ├── validateBook.js          # Middleware to validate book data before adding or updating a book.
  │   ├── 📂 utils
- │   │   ├── errorHandler.js
+ │   │   ├── errorHandler.js          # Error handling middleware to catch all errors and send appropriate responses.
  ├── 📂 tests
- │   │   ├── bookRoutes.test.js
- ├── swagger.json
- ├── .gitignore
- ├── package.json
- ├── README.md
+ │   │   ├── bookRoutes.test.js       # Contains tests for the book routes to ensure proper API functionality.
+ │       ├── bookController.test.js   # Contains tests for the controller logic to ensure business logic is working.
+ ├── swagger.json                     # Swagger API documentation for your project, describing endpoints and data formats.
+ ├── .gitignore                       # Specifies files and directories that should be ignored by Git (e.g., node_modules).
+ ├── package.json                     # Contains metadata about the project (dependencies, scripts, etc.).
+ ├── README.md                        
+
 ```
 
 ## Dependencies
