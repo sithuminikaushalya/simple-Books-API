@@ -64,6 +64,12 @@ http://localhost:3000/api-docs
  │   │   ├── bookModel.js
  │   ├── 📂 routes
  │   │   ├── bookRoutes.js
+ │   ├── 📂 middlewares
+ │   │   ├── validateBook.js
+ │   ├── 📂 utils
+ │   │   ├── errorHandler.js
+ ├── 📂 tests
+ │   │   ├── bookRoutes.test.js
  ├── swagger.json
  ├── .gitignore
  ├── package.json
@@ -74,8 +80,4 @@ http://localhost:3000/api-docs
 - Express.js
 - Swagger-UI-Express
 
-## Author
-Your Name
 
-## License
-This project is licensed under the MIT License.
