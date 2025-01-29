@@ -61,7 +61,7 @@ To run the automated tests using Jest and Supertest:
 npm test
 ```
 
-![Test Results](https://github.com/user-attachments/assets/105ef0be-05dd-47e0-b7e4-573e177d935a)
+![Test Results](https://github.com/user-attachments/assets/6d835e8d-1742-4912-a656-18ae6fe994db)
 
 ## Project Structure
 ```
