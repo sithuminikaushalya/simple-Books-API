@@ -1,0 +1,124 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Books API",
+    "version": "1.0.0",
+    "description": "API for managing a collection of books"
+  },
+  "host": "localhost:3000",
+  "schemes": ["http"],
+  "paths": {
+    "/books": {
+      "get": {
+        "summary": "Get all books",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "type": "integer",
+            "description": "Page number for pagination"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "integer",
+            "description": "Number of books per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Book" }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add a new book",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "book",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Book" }
+          }
+        ],
+        "responses": {
+          "201": { "description": "Book created successfully" }
+        }
+      }
+    },
+    "/books/{id}": {
+      "get": {
+        "summary": "Get a book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID of the book to retrieve"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Book details",
+            "schema": { "$ref": "#/definitions/Book" }
+          },
+          "404": { "description": "Book not found" }
+        }
+      },
+      "put": {
+        "summary": "Update a book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID of the book to update"
+          },
+          {
+            "in": "body",
+            "name": "book",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Book" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Book updated successfully" },
+          "404": { "description": "Book not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID of the book to delete"
+          }
+        ],
+        "responses": {
+          "204": { "description": "Book deleted successfully" },
+          "404": { "description": "Book not found" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Book": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "author": { "type": "string" },
+        "publishedYear": { "type": "integer" }
+      }
+    }
+  }
+}
