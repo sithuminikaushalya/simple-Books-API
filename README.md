@@ -1,4 +1,3 @@
-# API Documentation
 # Books API
 
 ## Overview
@@ -11,6 +10,7 @@ A simple RESTful API to manage books, built with Node.js and Express.
 - Update a book by ID
 - Delete a book by ID
 - API documentation with Swagger
+- Automated testing using Jest and Supertest
 
 ## Setup Instructions
 
@@ -51,8 +51,17 @@ http://localhost:3000/api-docs
 ```
 
 ### Testing with Postman
-1. Import the Swagger JSON file into Postman.
-2. Use the provided endpoints to test API functionality.
+1. Download the Postman collection: [Book Management Postman Collection](https://github.com/user-attachments/files/18583252/Book.Management.postman_collection.json)
+2. Import the collection into Postman.
+3. Use the provided endpoints to test API functionality.
+
+### Running Tests
+To run the automated tests using Jest and Supertest:
+```sh
+npm test
+```
+
+![Test Results](https://github.com/user-attachments/assets/105ef0be-05dd-47e0-b7e4-573e177d935a)
 
 ## Project Structure
 ```
@@ -79,5 +88,6 @@ http://localhost:3000/api-docs
 ## Dependencies
 - Express.js
 - Swagger-UI-Express
-
+- Jest
+- Supertest
 
