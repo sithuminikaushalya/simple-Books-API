@@ -20,7 +20,7 @@ Ensure you have Node.js (v16 or higher) installed.
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/sithuminikaushalya/simple-Books-API
    cd <your-repo-directory>
    ```
 2. Install dependencies:
