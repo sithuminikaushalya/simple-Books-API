@@ -49,6 +49,7 @@ Swagger documentation is available at:
 ```
 http://localhost:3000/api-docs
 ```
+![Documentation](https://github.com/user-attachments/assets/5d8df329-2e6e-4f83-84c2-f4ed7cb47f1e)
 
 ### Testing with Postman
 1. Download the Postman collection: [Book Management Postman Collection](https://github.com/user-attachments/files/18583252/Book.Management.postman_collection.json)
